@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1P2-aq-dd3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Ubuntu-Medium.ttf">
+            <string>Ubuntu-Medium</string>
+        </array>
+        <array key="Ubuntu-Regular.ttf">
+            <string>Ubuntu-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="vgN-pe-JNF">
+            <objects>
+                <viewController id="pEa-NO-bo1" customClass="SearchViewController" customModule="Signum_Movie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d30-fr-JL3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7ep-qh-FZ5">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieTableViewCell" rowHeight="162" id="FQc-4C-m8P" customClass="MovieTableViewCell" customModule="Signum_Movie" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="162"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FQc-4C-m8P" id="7ev-LB-RQw">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="162"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="OuF-NW-v9y">
+                                                    <rect key="frame" x="8" y="8" width="164" height="146"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SsX-k3-BnM">
+                                                            <rect key="frame" x="0.0" y="0.0" width="102" height="146"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="SsX-k3-BnM" secondAttribute="height" multiplier="0.7" id="Qqd-nN-pex"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="10"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="6bG-qj-nD3">
+                                                            <rect key="frame" x="118" y="0.0" width="46" height="65.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="Khh-19-AQu">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="46" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="18"/>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6JH-WN-78k">
+                                                                    <rect key="frame" x="0.0" y="23.5" width="46" height="19.5"/>
+                                                                    <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="17"/>
+                                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftK-H2-ewc">
+                                                                    <rect key="frame" x="0.0" y="46" width="46" height="19.5"/>
+                                                                    <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="17"/>
+                                                                    <color key="textColor" red="0.69712113360969385" green="0.68217572063004894" blue="0.78108640917304417" alpha="0.67506762371947437" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="OuF-NW-v9y" secondAttribute="bottom" constant="8" id="0Cg-p1-EGx"/>
+                                                <constraint firstItem="OuF-NW-v9y" firstAttribute="leading" secondItem="7ev-LB-RQw" secondAttribute="leading" constant="8" id="M5j-Vk-sTe"/>
+                                                <constraint firstItem="SsX-k3-BnM" firstAttribute="height" secondItem="7ev-LB-RQw" secondAttribute="height" multiplier="0.901235" id="V2U-yt-top"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OuF-NW-v9y" secondAttribute="trailing" constant="8" id="w0V-vC-IOc"/>
+                                                <constraint firstItem="OuF-NW-v9y" firstAttribute="top" secondItem="7ev-LB-RQw" secondAttribute="top" constant="8" id="wPE-gD-drg"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="coverimageView" destination="SsX-k3-BnM" id="2qO-MY-iok"/>
+                                            <outlet property="dateLabel" destination="6JH-WN-78k" id="Qg4-QN-jXl"/>
+                                            <outlet property="nameLabel" destination="Khh-19-AQu" id="UJi-tr-oIu"/>
+                                            <outlet property="overviewLabel" destination="ftK-H2-ewc" id="6aa-B5-naD"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="pEa-NO-bo1" id="XAy-pY-3dA"/>
+                                    <outlet property="delegate" destination="pEa-NO-bo1" id="1jO-aj-G4Z"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="784-09-I1b"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="784-09-I1b" firstAttribute="trailing" secondItem="7ep-qh-FZ5" secondAttribute="trailing" id="Hq8-6T-96X"/>
+                            <constraint firstItem="7ep-qh-FZ5" firstAttribute="top" secondItem="784-09-I1b" secondAttribute="top" id="kGU-c3-vFr"/>
+                            <constraint firstItem="7ep-qh-FZ5" firstAttribute="leading" secondItem="784-09-I1b" secondAttribute="leading" id="ocu-UL-edH"/>
+                            <constraint firstItem="7ep-qh-FZ5" firstAttribute="bottom" secondItem="d30-fr-JL3" secondAttribute="bottom" id="zs2-ul-zXY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Edg-te-0aS"/>
+                    <connections>
+                        <outlet property="movieTableView" destination="7ep-qh-FZ5" id="Fde-RN-GaK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vxI-tm-DfX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="557.97101449275362" y="-50.223214285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KjI-la-Wcm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1P2-aq-dd3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ae4-ze-bHV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pEa-NO-bo1" kind="relationship" relationship="rootViewController" id="qCA-5M-8fd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PPH-Vk-ZyL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-352.17391304347831" y="-50.223214285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
